@@ -476,6 +476,23 @@ window.addEventListener('scroll', () => {
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<script>
+    const heroImages = [
+        "images/banner1.jpg",
+        "images/banner5.jpg",
+        "images/banner3.jpg",
+        "images/banner4.jpg"
+    ];
 
+    let currentImage = 0;
+
+    function changeHeroImage() {
+        currentImage = (currentImage + 1) % heroImages.length;
+        document.querySelector(".hero").style.backgroundImage =
+            `url('${heroImages[currentImage]}')`;
+    }
+
+    setInterval(changeHeroImage, 5000);
+</script>
 </body>
 </html>
