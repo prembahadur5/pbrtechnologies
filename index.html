@@ -83,11 +83,14 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
+    align-items: center;
+    padding: 10px 20px;
     background: #cfc6c6;
     color: white;
+
     position: sticky;
     top: 0;
+    z-index: 9999;
 }
 
 nav a {
@@ -97,28 +100,71 @@ nav a {
 }
 
 /* Hero */
-/*.hero {
-    height: 100vh;
-    background: linear-gradient(120deg, #1e3a8a, #2563eb);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-}*/
 .hero {
-    height: 100vh;
-    background: url('images/banner1.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 400px;
+
+    background-image: url('images/banner1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
     color: white;
     position: relative;
-	
-	padding: 60px 20px;
-    text-align: center;
+    z-index: 1;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* Hero text above overlay */
+.hero > div {
+    position: relative;
+    z-index: 2;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .hero {
+        height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .hero {
+        height: 250px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 250px;
+    }
 }
 
 .hero h1 {
@@ -274,15 +320,56 @@ footer {
 
 .whatsapp-float {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    right: 25px;
+    bottom: 25px;
+
+    width: 180px;
+    height: 60px;
+
     background: #25D366;
     color: white;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 20px;
+
+    border-radius: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-size: 18px;
+    font-weight: 600;
     text-decoration: none;
-    z-index: 1000;
+
+    z-index: 99999;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+@media (max-width: 480px) {
+    .whatsapp-float {
+        right: 15px;
+        bottom: 15px;
+        width: 155px;
+        height: 52px;
+        font-size: 16px;
+    }
+
+    .whatsapp-icon {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .call-btn {
@@ -494,5 +581,26 @@ window.addEventListener('scroll', () => {
 
     setInterval(changeHeroImage, 5000);
 </script>
+<a
+    href="https://wa.me/917905505209?text=Hello%20PBR%20Technologies%2C%20I%20am%20interested%20in%20your%20services."
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Chat with PBR Technologies on WhatsApp">
+    💬
+</a>
+
+<a
+    href="https://wa.me/917905505209?text=Hello%20PBR%20Technologies%2C%20I%20am%20interested%20in%20your%20services."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener">
+
+    <span>Open Chat</span>
+
+    <img
+        src="images/whatsapp.png"
+        class="whatsapp-icon"
+        alt="WhatsApp">
+</a>
 </body>
 </html>
