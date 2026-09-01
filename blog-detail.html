@@ -1,116 +1,673 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog | PBR Technologies</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- SEO -->
+
+<title>How to Build Modern Websites | PBR Technologies</title>
+
+<meta name="description"
+   content="Learn how to build modern, responsive and professional websites with PBR Technologies.">
+
+<meta name="robots" content="index, follow">
+
+<meta name="author" content="PBR Technologies">
+
+<link rel="canonical" href="https://www.pbrtechnologies.shop/blog-detail.html">
+
+<!-- Open Graph -->
+
+<meta property="og:title"
+   content="How to Build Modern Websites | PBR Technologies">
+
+<meta property="og:description"
+   content="Learn how to build modern, responsive and professional websites.">
+
+<meta property="og:type" content="article">
+
+<meta property="og:url"
+   content="https://www.pbrtechnologies.shop/blog-detail.html">
+
+<meta property="og:image"
+   content="https://www.pbrtechnologies.shop/images/logo.png">
+
+<meta property="og:site_name"
+   content="PBR Technologies">
+
+<!-- Google Font -->
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet">
 
 <style>
-body {
-    font-family: 'Poppins', sans-serif;
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    background: #ffffff;
+    color: #0f172a;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #cfc6c6;
+    color: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* =========================
+   BLOG HERO
+========================= */
+
+.blog-hero {
+    width: 100%;
+    min-height: 300px;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url('images/banner1.jpg');
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 50px 20px;
+}
+
+.blog-hero-content {
+    max-width: 900px;
+}
+
+.blog-hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.blog-hero p {
+    margin-top: 15px;
+    font-size: 1.05rem;
+}
+
+/* =========================
+   BLOG CONTENT
+========================= */
+
+.blog-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.blog-image {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    margin-bottom: 35px;
+}
+
+.blog-content h2 {
+    font-size: 2rem;
+    margin: 35px 0 15px;
+    color: #0f172a;
+}
+
+.blog-content h3 {
+    font-size: 1.4rem;
+    margin: 30px 0 10px;
+    color: #2563eb;
+}
+
+.blog-content p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    color: #475569;
+}
+
+.blog-content ul {
+    margin: 20px 0 25px 25px;
+}
+
+.blog-content li {
+    margin-bottom: 10px;
+    color: #475569;
+}
+
+/* =========================
+   BLOG META
+========================= */
+
+.blog-meta {
+    margin-bottom: 25px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 11px 22px;
+
+    background: #2563eb;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8fafc;
+}
+
+.contact-box h2 {
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    margin-bottom: 25px;
+    color: #64748b;
+}
+
+.contact-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.call {
+    background: #2563eb;
+    color: white;
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
     background: #0f172a;
     color: white;
     padding: 20px;
+    text-align: center;
 }
 
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 40px 20px;
+/* =========================
+   WHATSAPP FLOAT
+========================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 180px;
+    height: 60px;
+
+    background: #25D366;
+    color: white;
+
+    border-radius: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+
+    z-index: 99999;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.3s ease;
 }
 
-img {
-    width: 100%;
-    border-radius: 10px;
+.whatsapp-float:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-h1 {
-    margin-top: 20px;
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 }
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    nav {
+        padding-bottom: 10px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    .blog-hero {
+        min-height: 260px;
+        padding: 40px 15px;
+    }
+
+    .blog-hero h1 {
+        font-size: 2rem;
+    }
+
+    .blog-hero p {
+        font-size: 0.9rem;
+    }
+
+    .blog-container {
+        padding: 40px 18px;
+    }
+
+    .blog-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .blog-content p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .whatsapp-float {
+        right: 15px;
+        bottom: 15px;
+        width: 155px;
+        height: 52px;
+        font-size: 16px;
+    }
+
+    .whatsapp-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+
+    nav a {
+        margin: 0 4px;
+        font-size: 12px;
+    }
+
+    .blog-hero {
+        min-height: 230px;
+    }
+
+    .blog-hero h1 {
+        font-size: 1.55rem;
+    }
+
+    .blog-container {
+        padding: 30px 15px;
+    }
+
+    .blog-image {
+        border-radius: 10px;
+    }
+
+    .whatsapp-float {
+        width: 145px;
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
 </style>
+
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-    <h2>PBR Technologies</h2>
+
+```
+<div class="logo">
+    <img src="/images/logo.png"
+         alt="PBR Technologies">
+</div>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/#services">Services</a>
+    <a href="/#blogs">Blogs</a>
+    <a href="/#contact">Contact</a>
+</nav>
+```
+
 </header>
 
-<div class="container">
-    <img src="https://via.placeholder.com/800x400">
+<!-- =========================
+     BLOG HERO
+========================= -->
+
+<section class="blog-hero">
+
+```
+<div class="blog-hero-content">
 
     <h1>How to Build Modern Websites</h1>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    This is your full blog content.</p>
+    <p>
+        A complete guide to creating fast, responsive and
+        professional websites.
+    </p>
 
-    <p>Add more paragraphs here...</p>
+</div>
+```
+
+</section>
+
+<!-- =========================
+     BLOG CONTENT
+========================= -->
+
+<main class="blog-container">
+
+```
+<img
+    src="https://via.placeholder.com/900x450"
+    alt="Modern Website Development"
+    class="blog-image"
+>
+
+<div class="blog-meta">
+    Published by PBR Technologies · Web Development
 </div>
 
-</body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog | PBR Technologies</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<article class="blog-content">
 
-<style>
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-}
+    <p>
+        Modern websites are an important part of every successful
+        business. A professional website helps businesses build
+        trust, reach more customers and provide their services
+        online.
+    </p>
 
-header {
-    background: #0f172a;
-    color: white;
-    padding: 20px;
-}
+    <p>
+        Today, users access websites from smartphones, tablets,
+        laptops and desktop computers. Because of this, a modern
+        website needs to work properly on every screen size.
+    </p>
 
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 40px 20px;
-}
 
-img {
-    width: 100%;
-    border-radius: 10px;
-}
+    <h2>What Makes a Modern Website?</h2>
 
-h1 {
-    margin-top: 20px;
-}
-</style>
-</head>
+    <p>
+        A modern website is more than just an attractive design.
+        It should provide a fast, secure and simple experience
+        for visitors.
+    </p>
 
-<body>
+    <ul>
+        <li>Responsive design for mobile and desktop</li>
+        <li>Fast loading speed</li>
+        <li>Simple and professional user interface</li>
+        <li>Search engine optimization</li>
+        <li>Secure website architecture</li>
+        <li>Easy navigation</li>
+    </ul>
 
-<header>
-    <h2>PBR Technologies</h2>
-</header>
 
-<div class="container">
-    <img src="https://via.placeholder.com/800x400">
+    <h2>1. Responsive Web Design</h2>
 
-    <h1>How to Build Modern Websites</h1>
+    <p>
+        Responsive design allows a website to automatically adjust
+        its layout according to the user's screen size.
+        This is especially important because a large percentage
+        of internet users browse websites using mobile devices.
+    </p>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    This is your full blog content.</p>
 
-    <p>Add more paragraphs here...</p>
+    <h2>2. Fast Performance</h2>
+
+    <p>
+        Website speed is important for both users and search
+        engines. Large images, unnecessary scripts and poorly
+        optimized code can make a website slow.
+    </p>
+
+    <p>
+        Optimizing images, reducing unnecessary JavaScript and
+        using efficient CSS can significantly improve performance.
+    </p>
+
+
+    <h2>3. Professional User Experience</h2>
+
+    <p>
+        Visitors should be able to quickly understand what your
+        business offers. Clear navigation, readable typography
+        and well-designed sections make the website easier to use.
+    </p>
+
+
+    <h2>4. SEO-Friendly Structure</h2>
+
+    <p>
+        Search engine optimization helps your website become more
+        visible in search results. Proper page titles, descriptions,
+        headings and useful content are important parts of SEO.
+    </p>
+
+
+    <h2>5. Mobile-Friendly Design</h2>
+
+    <p>
+        A website should look professional on smaller screens.
+        Buttons, menus, images and text should be easy to use
+        without requiring users to zoom or scroll horizontally.
+    </p>
+
+
+    <h2>Conclusion</h2>
+
+    <p>
+        Building a modern website requires a combination of
+        attractive design, good performance, responsive layouts,
+        security and useful content.
+    </p>
+
+    <p>
+        At <strong>PBR Technologies</strong>, we create modern
+        websites, mobile applications and custom software solutions
+        designed to help businesses grow.
+    </p>
+
+
+    <a href="/#blogs" class="back-btn">
+        ← Back to Blogs
+    </a>
+
+</article>
+```
+
+</main>
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact-box">
+
+```
+<h2>Let’s Build Something Great 🚀</h2>
+
+<p>
+    Contact us for websites, apps & software solutions
+</p>
+
+<div class="contact-actions">
+
+    <a href="tel:+917905505209"
+       class="btn call">
+        📞 Call
+    </a>
+
+    <a
+        href="https://wa.me/917905505209?text=Hello%20PBR%20Technologies%2C%20I%20am%20interested%20in%20your%20services."
+        target="_blank"
+        rel="noopener"
+        class="btn whatsapp">
+
+        💬 WhatsApp
+
+    </a>
+
 </div>
+```
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+```
+<p>
+    © 2026 PBR Technologies. All rights reserved.
+</p>
+```
+
+</footer>
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+ href="https://wa.me/917905505209?text=Hello%20PBR%20Technologies%2C%20I%20am%20interested%20in%20your%20services."
+ class="whatsapp-float"
+ target="_blank"
+ rel="noopener"
+ aria-label="Chat with PBR Technologies on WhatsApp">
+
+```
+<span>Open Chat</span>
+
+<img
+    src="images/whatsapp.png"
+    class="whatsapp-icon"
+    alt="WhatsApp">
+```
+
+</a>
 
 </body>
->>>>>>> da7519a900976a81ae50cbfc18535733a162f815
 </html>
