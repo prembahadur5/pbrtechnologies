@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO -->
-<title>PBR Technologies | Web, Mobile, School ERP & Software Development Company</title>
+<!-- Primary SEO -->
+<title>Software Development Company in Varanasi | PBR Technologies</title>
 
 <meta name="description"
-      content="PBR Technologies provides professional web development, mobile app development, custom software and cloud solutions for businesses.">
+      content="PBR Technologies is a software development company in Varanasi offering web development, mobile app development, custom software, ERP and cloud solutions for businesses.">
 
 <meta name="robots" content="index, follow">
 
@@ -16,17 +17,41 @@
 
 <link rel="canonical" href="https://www.pbrtechnologies.shop/">
 
-<!-- Twitter Card -->
+<!-- Open Graph -->
+<meta property="og:title"
+      content="Software Development Company in Varanasi | PBR Technologies">
+
+<meta property="og:description"
+      content="PBR Technologies provides web development, mobile app development, custom software, ERP and cloud solutions for businesses in Varanasi and across India.">
+
+<meta property="og:type" content="website">
+
+<meta property="og:url"
+      content="https://www.pbrtechnologies.shop/">
+
+<meta property="og:image"
+      content="https://www.pbrtechnologies.shop/images/logo.png">
+
+<meta property="og:image:alt"
+      content="PBR Technologies - Software Development Company">
+
+<meta property="og:site_name"
+      content="PBR Technologies">
+
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 
 <meta name="twitter:title"
-      content="PBR Technologies | Software Development Company">
+      content="Software Development Company in Bhadohi | PBR Technologies">
 
 <meta name="twitter:description"
-      content="Web development, mobile apps, custom software and cloud solutions.">
+      content="Web development, mobile apps, custom software, ERP and cloud solutions by PBR Technologies.">
 
 <meta name="twitter:image"
       content="https://www.pbrtechnologies.shop/images/logo.png">
+	  
+	  <!--END SEO section-->
+	  <!--JSON id-->
 	  
 <script type="application/ld+json">
 {
@@ -35,13 +60,28 @@
   "name": "PBR Technologies",
   "url": "https://www.pbrtechnologies.shop/",
   "logo": "https://www.pbrtechnologies.shop/images/logo.png",
-  "description": "PBR Technologies provides web development, mobile app development, custom software and cloud solutions.",
-  "email": "",
+  "description": "PBR Technologies is a software development company in Bhadohi providing web development, mobile app development, custom software, ERP and cloud solutions.",
   "telephone": "+91-7905505209",
-  "sameAs": []
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Bhadohi"
+    },
+    {
+      "@type": "Country",
+      "name": "India"
+    }
+  ],
+  "knowsAbout": [
+    "Web Development",
+    "Mobile App Development",
+    "Custom Software Development",
+    "ERP Software Development",
+    "Cloud Solutions"
+  ]
 }
 </script>
-
+<!--END JSON Id-->
 <!-- Open Graph -->
 <meta property="og:title"
       content="PBR Technologies | Software Development Company">
@@ -428,13 +468,25 @@ footer {
    <div syle="display:flex; align-items:center; gap:10px;"-->
    <div style="display:flex; align-items:center; gap:10px;">
         <!--img src="https://pbrtechnologies.shop/images/logo.png" alt="PBR Technologies" style="height:70px;"-->
-		<img src="/images/logo.png" alt="PBR Technologies" style="height:70px;">
+		
+		<img src="/images/logo.png"
+			alt="PBR Technologies software development company"
+			width="70"
+			height="70"
+			style="height:70px;">
     </div>
 	
-    <nav>
+    <!--nav>
 		<a href="/">Home</a>
 		<a href="/about.html">About</a>
 		<a href="/#services">Services</a>
+		<a href="/#contact">Contact</a>
+	</nav-->
+	<nav aria-label="Main navigation">
+		<a href="/">Home</a>
+		<a href="/about.html">About PBR Technologies</a>
+		<a href="/#services">Software Services</a>
+		<a href="/#blogs">Blog</a>
 		<a href="/#contact">Contact</a>
 	</nav>
 </header>
@@ -442,30 +494,71 @@ footer {
 <!-- HERO -->
 <section class="hero" id="home">
     <div>
-        <h1>Web, Mobile & Custom Software Development Company</h1>
-        <p>We create powerful software solutions</p>
+        <h1>Software Development Company in Bhadohi</h1>
+
+        <p>
+            Web development, mobile apps, custom software,
+            ERP and cloud solutions for businesses.
+        </p>
+
         <button onclick="scrollToSection()">Get Started</button>
     </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section" id="services">
-    <h2>Our Services</h2>
+    <h2>Software Development Services in Bhadohi</h2>
+
+    <p>
+        PBR Technologies provides reliable digital solutions for
+        businesses, startups and organizations in Bhadohi and across India.
+    </p>
+
     <div class="services">
+
         <div class="card">
             <h3>Web Development</h3>
-            <p>Modern responsive websites</p>
+            <p>
+                We build fast, responsive and professional websites
+                for businesses and organizations.
+            </p>
         </div>
+
         <div class="card">
-            <h3>Mobile Apps</h3>
-            <p>Android & iOS development</p>
+            <h3>Mobile App Development</h3>
+            <p>
+                We develop modern Android and iOS mobile applications
+                designed around your business requirements.
+            </p>
         </div>
+
+        <div class="card">
+            <h3>Custom Software Development</h3>
+            <p>
+                We create custom business software that helps companies
+                automate processes and improve productivity.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>ERP Software Development</h3>
+            <p>
+                Our ERP solutions help businesses manage operations,
+                customers, inventory and business processes efficiently.
+            </p>
+        </div>
+
         <div class="card">
             <h3>Cloud Solutions</h3>
-            <p>Scalable cloud systems</p>
+            <p>
+                We provide scalable cloud solutions that help businesses
+                securely manage applications and digital services.
+            </p>
         </div>
+
     </div>
 </section>
+<!-- End Service saction -->
 <!-- Blogs saction -->
 <section class="section" id="blogs">
     <h2 data-aos="fade-up">Latest Blogs</h2>
@@ -473,22 +566,31 @@ footer {
     <div class="services">
 
         <div class="card" data-aos="fade-up">
-            <img src="https://via.placeholder.com/300x180" style="width:100%; border-radius:10px;">
-            <h3>How to Build Modern Websites</h3>
+            <img src="images/banner3.jpg"
+				alt="Web development services and modern website development"
+				loading="lazy"
+				style="width:100%; border-radius:10px;">
+			<h3>How to Build Modern Websites</h3>
             <p>Learn the latest trends in web development.</p>
             <a href="blog-detail.html">Read More</a>
 			</div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="150">
-            <img src="https://via.placeholder.com/300x180" style="width:100%; border-radius:10px;">
-            <h3>Why Your Business Needs an App</h3>
+            <img src="images/banner4.jpg"
+				alt="Mobile app development services for businesses"
+				loading="lazy"
+				style="width:100%; border-radius:10px;">
+			<h3>Why Your Business Needs an App</h3>
             <p>Mobile apps can grow your business faster.</p>
 			<a href="blog-app.html">Read More</a>
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="300">
-            <img src="https://via.placeholder.com/300x180" style="width:100%; border-radius:10px;">
-            <h3>Cloud Computing Explained</h3>
+            <img src="images/banner5.jpg"
+				alt="Cloud computing and cloud software solutions"
+				loading="lazy"
+				style="width:100%; border-radius:10px;">
+			<h3>Cloud Computing Explained</h3>
             <p>Everything you need to know about cloud tech.</p>
             <a href="blog-cloud.html">Read More</a>
         

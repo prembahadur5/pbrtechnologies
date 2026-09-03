@@ -2,22 +2,41 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <url>
-        <loc>https://pbrtechnologies.shop/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
+```
+<!-- Home -->
+<url>
+    <loc>https://www.pbrtechnologies.shop/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+</url>
 
-    <url>
-        <loc>https://pbrtechnologies.shop/about.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
+<!-- About -->
+<url>
+    <loc>https://www.pbrtechnologies.shop/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 
-    <url>
-        <loc>https://pbrtechnologies.shop/blog-detail.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
+<!-- Blog 1 -->
+<url>
+    <loc>https://www.pbrtechnologies.shop/blog-detail.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<!-- Blog 2 -->
+<url>
+    <loc>https://www.pbrtechnologies.shop/blog-app.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<!-- Blog 3 -->
+<url>
+    <loc>https://www.pbrtechnologies.shop/blog-cloud.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+```
 
 </urlset>
