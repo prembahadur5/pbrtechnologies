@@ -4,285 +4,783 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About Us | PBR Technologies</title>
-<meta name="description" content="PBR Technologies - Software company delivering modern solutions.">
+<title>About PBR Technologies | Software Company Serving Varanasi</title>
+<meta name="description" content="Learn about PBR Technologies, a software development company serving Varanasi, Bhadohi and businesses across India with web, mobile, custom software, ERP and cloud solutions.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.pbrtechnologies.shop/about.html">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="About PBR Technologies | Software Company Serving Varanasi">
+<meta property="og:description" content="PBR Technologies delivers web development, mobile apps, custom software, ERP and cloud solutions for businesses in Varanasi, Bhadohi and across India.">
+<meta property="og:url" content="https://www.pbrtechnologies.shop/about.html">
+<meta property="og:image" content="https://www.pbrtechnologies.shop/images/logo.png">
+<meta property="og:site_name" content="PBR Technologies">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About PBR Technologies | Software Company Serving Varanasi">
+<meta name="twitter:description" content="Discover PBR Technologies and our software development services for businesses across Varanasi, Bhadohi and India.">
+<meta name="twitter:image" content="https://www.pbrtechnologies.shop/images/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <!-- AOS Animation -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Organization / AboutPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About PBR Technologies",
+  "url": "https://www.pbrtechnologies.shop/about.html",
+  "description": "About PBR Technologies, a software development company serving Varanasi, Bhadohi and businesses across India.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "PBR Technologies",
+    "url": "https://www.pbrtechnologies.shop/"
+  },
+  "about": {
+    "@type": "Organization",
+    "name": "PBR Technologies",
+    "url": "https://www.pbrtechnologies.shop/",
+    "logo": "https://www.pbrtechnologies.shop/images/logo.png",
+    "telephone": "+91-7905505209",
+    "areaServed": [
+      "Varanasi",
+      "Bhadohi",
+      "Uttar Pradesh",
+      "India"
+    ],
+    "knowsAbout": [
+      "Web Development",
+      "Mobile App Development",
+      "Custom Software Development",
+      "ERP Software Development",
+      "Cloud Solutions"
+    ]
+  }
+}
+</script>
+
 <style>
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1e3a8a;
+    --secondary: #7c3aed;
+    --dark: #0f172a;
+    --text: #334155;
+    --light: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: #fff;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
 }
 
 /* Navbar */
 header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 20px 50px;
+    gap: 20px;
+    padding: 10px 5%;
     background: #cfc6c6;
-    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.08);
 }
 
-nav a {
-    color: white;
-    margin-left: 20px;
+.logo-link {
+    display: flex;
+    align-items: center;
     text-decoration: none;
 }
 
-/* Hero with animation */
-/* Desktop */
+.logo {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #1e3a8a;
+}
+
+/* Hero */
 .hero {
-    height: 60vh;
-    min-height: 400px;
+    min-height: 430px;
+    height: 58vh;
     max-height: 600px;
-
-    background: url('images/banner1.jpg') no-repeat center center;
+    background:
+        linear-gradient(rgba(15, 23, 42, 0.58), rgba(30, 58, 138, 0.58)),
+        url('images/banner1.jpg') no-repeat center center;
     background-size: cover;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-align: center;
-    color: white;
+    color: #fff;
     position: relative;
     overflow: hidden;
 }
 
-/* Overlay */
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-}
-
-/* Content */
-.hero > div {
+.hero-content {
+    width: 90%;
+    max-width: 950px;
     position: relative;
     z-index: 2;
-    width: 90%;
-    max-width: 900px;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 5vw, 4rem);
     line-height: 1.2;
-    margin-bottom: 10px;
+    margin: 0 0 15px;
+    font-weight: 700;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin: 0 auto 25px;
+    max-width: 800px;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-
-    .hero {
-        height: 50vh;
-        min-height: 300px;
-        max-height: 400px;
-    }
-
-    .hero > div {
-        width: 90%;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-        line-height: 1.25;
-    }
-
-    .hero p {
-        font-size: 1rem;
-        margin-top: 10px;
-    }
+.hero-btn {
+    display: inline-block;
+    background: #fff;
+    color: var(--primary-dark);
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
-/* Small mobile */
-@media (max-width: 480px) {
-
-    .hero {
-        height: 45vh;
-        min-height: 260px;
-        max-height: 330px;
-    }
-
-    .hero h1 {
-        font-size: 1.6rem;
-        line-height: 1.3;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
-    .hero button {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-}
-/*-----*/
-@keyframes gradientMove {
-    0% { background: linear-gradient(120deg, #1e3a8a, #2563eb); }
-    100% { background: linear-gradient(120deg, #2563eb, #1e40af); }
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
 }
 
+/* Common sections */
 .section {
-    padding: 60px 20px;
+    padding: 70px 5%;
     text-align: center;
 }
 
-/* Stats */
-.stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+.section h2 {
+    color: var(--dark);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin: 0 0 15px;
 }
 
-.stat {
-    background: #f1f5f9;
-    padding: 20px;
-    border-radius: 10px;
+.section-intro {
+    max-width: 800px;
+    margin: 0 auto 35px;
 }
 
-/* Team */
-.team {
+/* About */
+.about-content {
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+}
+
+.highlight {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Services */
+.services {
+    background: var(--light);
+}
+
+.service-grid {
+    max-width: 1100px;
+    margin: 35px auto 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
-.member {
-    background: #f1f5f9;
-    padding: 20px;
-    border-radius: 15px;
+.service-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 25px 18px;
+    border-radius: 16px;
+    transition: 0.3s ease;
 }
 
-.member img {
-    width: 100%;
-    border-radius: 10px;
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+}
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 15px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.service-card h3 {
+    color: var(--dark);
+    margin: 8px 0;
+    font-size: 1.05rem;
+}
+
+.service-card p {
+    margin: 0;
+    font-size: 0.92rem;
+}
+
+/* Stats */
+.stats {
+    max-width: 1000px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.stat {
+    background: #f1f5f9;
+    padding: 25px 15px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+}
+
+.stat h3 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 2.1rem;
+}
+
+.stat p {
+    margin: 4px 0 0;
+}
+
+/* Team */
+.team {
+    max-width: 1000px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.member {
+    background: #f1f5f9;
+    padding: 28px 20px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+}
+
+.member-avatar {
+    width: 105px;
+    height: 105px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.member h3 {
+    margin: 0 0 4px;
+    color: var(--dark);
+}
+
+.member p {
+    margin: 0;
 }
 
 /* Office */
 .office {
-    background: #f8fafc;
+    background: var(--light);
+}
+
+.office-box {
+    max-width: 850px;
+    margin: 30px auto 0;
+    background: #fff;
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+}
+
+.contact-line {
+    margin: 10px 0;
+}
+
+.contact-line a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-line a:hover {
+    text-decoration: underline;
 }
 
 /* Map */
-iframe {
+.map-section iframe {
     width: 100%;
-    height: 300px;
-    border: none;
+    max-width: 1000px;
+    height: 350px;
+    border: 0;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(120deg, #1e3a8a, #2563eb, #7c3aed);
+    color: #fff;
+}
+
+.cta h2 {
+    color: #fff;
+}
+
+.cta p {
+    max-width: 750px;
+    margin: 0 auto 25px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #fff;
+    color: var(--primary-dark);
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+}
+
+/* WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.whatsapp-float img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
 }
 
 /* Footer */
 footer {
     background: #0f172a;
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 25px 20px;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 8px 20px;
+        flex-direction: column;
+    }
+
+    .logo {
+        height: 58px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 3px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 330px;
+        height: 50vh;
+    }
+
+    .section {
+        padding: 50px 20px;
+    }
+
+    .about-content {
+        text-align: left;
+    }
+
+    .map-section iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        margin: 0 5px;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 290px;
+        height: 45vh;
+    }
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .section {
+        padding: 45px 16px;
+    }
+
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 </style>
 </head>
 
 <body>
 
-<header style="display:flex; align-items:center; justify-content:space-between; padding:10px 20px;">
+<header>
+    <a class="logo-link" href="index.html" aria-label="PBR Technologies Home">
+        <img class="logo"
+             src="images/logo.png"
+             alt="PBR Technologies software company logo"
+             width="200"
+             height="70">
+    </a>
 
-   <!-- Logo + Name -->
-   <div syle="display:flex; align-items:center; gap:10px;">
-        <img src="https://pbrtechnologies.shop/images/logo.png" alt="PBR Technologies" style="height:70px;">
-    </div>
-    <nav>
-		<a href="index.html#home">Home</a>
-		<a href="about.html">About</a>
-		<a href="index.html#services">Services</a>
-		<a href="index.html#contact">Contact</a>
-	</nav>
+    <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/about.html">About PBR Technologies</a>
+        <a href="/#services">Software Services</a>
+        <a href="/#blogs">Blog</a>
+        <a href="/#contact">Contact</a>
+    </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero" id="section">
-    <div data-aos="fade-up">
-        <h1>About PBR Technologies</h1>
-        <p>Innovating the future with technology</p>
+<section class="hero" aria-labelledby="about-title">
+    <div class="hero-content" data-aos="fade-up">
+        <h1 id="about-title">About PBR Technologies</h1>
+        <p>
+            Software development company serving Varanasi, Bhadohi and businesses
+            across India with modern digital solutions.
+        </p>
+        <a class="hero-btn" href="index.html#contact">Talk to Us</a>
+    </div>
+</section>
+
+<!-- ABOUT COMPANY -->
+<section class="section" aria-labelledby="company-title">
+    <div class="about-content" data-aos="fade-up">
+        <h2 id="company-title">About Our Software Company</h2>
+
+        <p>
+            <span class="highlight">PBR Technologies</span> is a software development
+            company focused on building practical, reliable and modern digital
+            solutions for businesses. We help organizations turn their ideas into
+            professional websites, mobile applications, custom software and
+            business management systems.
+        </p>
+
+        <p>
+            Based in Bhadohi, Uttar Pradesh, we serve businesses in
+            <strong>Varanasi, Bhadohi and across India</strong>. Our approach combines
+            clean design, responsive technology and business-focused development
+            to create solutions that are easy to use and ready to grow with your
+            organization.
+        </p>
+
+        <p>
+            From a company website or mobile application to custom ERP software
+            and cloud-based solutions, PBR Technologies works to deliver
+            technology that supports real business goals.
+        </p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" aria-labelledby="services-title">
+    <h2 id="services-title" data-aos="fade-up">What We Do</h2>
+    <p class="section-intro" data-aos="fade-up">
+        Our software services are designed for startups, small businesses and
+        growing organizations that need dependable digital solutions.
+    </p>
+
+    <div class="service-grid">
+        <article class="service-card" data-aos="fade-up">
+            <div class="service-icon" aria-hidden="true">W</div>
+            <h3>Web Development</h3>
+            <p>Modern, responsive and business-focused websites.</p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon" aria-hidden="true">M</div>
+            <h3>Mobile App Development</h3>
+            <p>Mobile applications designed around your users and business needs.</p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon" aria-hidden="true">S</div>
+            <h3>Custom Software</h3>
+            <p>Tailored software solutions for specific business workflows.</p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon" aria-hidden="true">E</div>
+            <h3>ERP Software</h3>
+            <p>Business management systems that help organize operations and data.</p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon" aria-hidden="true">C</div>
+            <h3>Cloud Solutions</h3>
+            <p>Scalable digital solutions designed for modern cloud environments.</p>
+        </article>
     </div>
 </section>
 
 <!-- STATS -->
-<section class="section">
-    <h2 data-aos="fade-up">Our Achievements</h2>
+<section class="section" aria-labelledby="achievements-title">
+    <h2 id="achievements-title" data-aos="fade-up">Our Achievements</h2>
+    <p class="section-intro" data-aos="fade-up">
+        We focus on building long-term relationships by delivering useful and
+        dependable technology solutions.
+    </p>
 
     <div class="stats">
         <div class="stat" data-aos="zoom-in">
-            <h2>50+</h2>
+            <h3>50+</h3>
             <p>Projects</p>
         </div>
 
         <div class="stat" data-aos="zoom-in" data-aos-delay="100">
-            <h2>30+</h2>
+            <h3>30+</h3>
             <p>Clients</p>
         </div>
 
         <div class="stat" data-aos="zoom-in" data-aos-delay="200">
-            <h2>5+</h2>
+            <h3>5+</h3>
             <p>Years Experience</p>
         </div>
     </div>
 </section>
 
 <!-- TEAM -->
-<section class="section">
-    <h2 data-aos="fade-up">Meet Our Team</h2>
+<section class="section services" aria-labelledby="team-title">
+    <h2 id="team-title" data-aos="fade-up">Meet Our Team</h2>
+    <p class="section-intro" data-aos="fade-up">
+        A focused team working across development, design and technology to
+        build digital products for our clients.
+    </p>
 
     <div class="team">
-        <div class="member" data-aos="fade-up">
-            <img src="https://via.placeholder.com/200">
+        <article class="member" data-aos="fade-up">
+            <div class="member-avatar" aria-hidden="true">PB</div>
             <h3>PREM BAHADUR</h3>
             <p>CEO</p>
-        </div>
+        </article>
 
-        <div class="member" data-aos="fade-up" data-aos-delay="150">
-            <img src="https://via.placeholder.com/200">
+        <article class="member" data-aos="fade-up" data-aos-delay="150">
+            <div class="member-avatar" aria-hidden="true">PB</div>
             <h3>PREM BAHADUR</h3>
             <p>Developer</p>
-        </div>
+        </article>
 
-        <div class="member" data-aos="fade-up" data-aos-delay="300">
-            <img src="https://via.placeholder.com/200">
+        <article class="member" data-aos="fade-up" data-aos-delay="300">
+            <div class="member-avatar" aria-hidden="true">PB</div>
             <h3>PREM BAHADUR</h3>
             <p>Designer</p>
-        </div>
+        </article>
     </div>
 </section>
+
 <!-- OFFICE -->
-<section class="section office" data-aos="fade-right">
-    <h2>Our Office</h2>
-    <p>PBR Technologies, Bhadohi-221401, Uttar Pradesh, India</p>
-    <p>Email: info@pbrtechnologies.com</p>
-    <p>Phone: +91 7905505209</p>
+<section class="section office" aria-labelledby="office-title">
+    <h2 id="office-title" data-aos="fade-up">Our Office</h2>
+
+    <div class="office-box" data-aos="fade-up">
+        <p class="contact-line">
+            <strong>Location:</strong>
+            PBR Technologies, Bhadohi-221401, Uttar Pradesh, India
+        </p>
+
+        <p class="contact-line">
+            <strong>Email:</strong>
+            <a href="mailto:info@pbrtechnologies.com">info@pbrtechnologies.com</a>
+        </p>
+
+        <p class="contact-line">
+            <strong>Phone:</strong>
+            <a href="tel:+917905505209">+91 7905505209</a>
+        </p>
+    </div>
 </section>
 
 <!-- GOOGLE MAP -->
-<section class="section">
-    <h2>Find Us</h2>
-	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3604.8449633888545!2d82.565368!3d25.376512!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398fddfc13fae639%3A0x85f6f89fe85867d7!2sHanuman%20Mandir!5e0!3m2!1sen!2sin!4v1788254486298!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-	</section>
+<section class="section map-section" aria-labelledby="map-title">
+    <h2 id="map-title" data-aos="fade-up">Find Us</h2>
+    <p class="section-intro" data-aos="fade-up">
+        Visit PBR Technologies in Bhadohi, Uttar Pradesh.
+    </p>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3604.8449633888545!2d82.565368!3d25.376512!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398fddfc13fae639%3A0x85f6f89fe85867d7!2sHanuman%20Mandir!5e0!3m2!1sen!2sin!4v1788254486298!5m2!1sen!2sin"
+        title="PBR Technologies location map in Bhadohi, Uttar Pradesh"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+</section>
+
+<!-- CTA -->
+<section class="section cta" aria-labelledby="cta-title">
+    <h2 id="cta-title" data-aos="fade-up">Let's Build Something Great</h2>
+    <p data-aos="fade-up">
+        Need a website, mobile app, custom software, ERP system or cloud solution?
+        Let's discuss your project.
+    </p>
+    <a class="cta-btn" href="index.html#contact">Contact PBR Technologies</a>
+</section>
+
+<!-- WhatsApp -->
+<a
+    class="whatsapp-float"
+    href="https://wa.me/917905505209?text=Hello%20PBR%20Technologies%2C%20I%20would%20like%20to%20discuss%20a%20software%20project."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with PBR Technologies on WhatsApp">
+    <img src="images/whatsapp.png" alt="WhatsApp" width="34" height="34">
+</a>
 
 <footer>
     <p>© 2026 PBR Technologies. All rights reserved.</p>
+
+    <p class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+    </p>
 </footer>
 
+<!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 1000,
-    once: true
-  });
+AOS.init({
+    duration: 900,
+    once: true,
+    offset: 80
+});
 </script>
-</body>
 
+</body>
 </html>
