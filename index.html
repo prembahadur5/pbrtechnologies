@@ -699,7 +699,7 @@ footer {
 </section>
 
 <!-- CONTACT -->
-<section class="section fade" id="contact">
+<!--section class="section" id="contact">
     <h2>Contact PBR Technologies</h2>
     <p>
         Looking for a software development company in Bhadohi?
@@ -718,6 +718,20 @@ footer {
 
         <button type="submit" class="submit">Send Message</button>
     </form>
+</section-->
+<!-- CONTACT --> 
+<section class="section" id="contact"> 
+	<h2>Contact PBR Technologies</h2> 
+	<p> Looking for a software development company in Bhadohi? Tell us about your website, app, ERP or custom software project. </p> 
+	<form action="https://formspree.io/f/mlgpzrow" method="POST"> 
+		<label for="name" class="sr-only">Your Name</label> 
+			<input id="name" type="text" name="name" placeholder="Your Name" required> 
+		<label for="email" class="sr-only">Your Email</label> 
+			<input id="email" type="email" name="email" placeholder="Your Email" required> 
+		<label for="message" class="sr-only">Message</label> 
+			<textarea id="message" name="message" rows="5" placeholder="Tell us about your project" required></textarea> 
+		<button type="submit" class="submit"> Send Message </button> 
+	</form> 
 </section>
 
 <section class="contact-box">
@@ -791,7 +805,6 @@ const heroImages = [
     "images/banner12.jpg",
     "images/banner7.jpg",
     "images/banner8.jpg"
-	"images/banner9.jpg"
 ];
 
 let currentImage = 0;
