@@ -302,24 +302,54 @@ nav a:focus {
 
 /* Footer */
 footer {
-    background: #0f172a;
-    color: #fff;
-    padding: 25px 20px;
-    text-align: center;
+  background: #111827;
+  color: #cbd5e1;
+  padding: 50px 0 20px;
+  margin-top: 20px;
 }
 
-footer p {
-    margin: 4px 0;
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
 }
 
-.footer-links a {
-    color: #cbd5e1;
-    text-decoration: none;
-    margin: 0 8px;
+.footer-brand {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
-.footer-links a:hover {
-    color: #fff;
+footer h3 {
+  color: #fff;
+  font-size: 17px;
+  margin-bottom: 14px;
+}
+
+footer p,
+footer li {
+  font-size: 14px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li {
+  margin-bottom: 8px;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.12);
+  margin-top: 35px;
+  padding-top: 18px;
+  text-align: center;
+  font-size: 13px;
 }
 
 /* Floating WhatsApp */
@@ -418,6 +448,7 @@ footer p {
 </head>
 
 <body>
+<!-- HEADER / NAVIGATION -->
 <!-- HEADER / NAVIGATION -->
 <header>
     <a href="index.html" class="logo-link" aria-label="PBR Technologies Home">
@@ -555,33 +586,12 @@ footer p {
             designed to help businesses grow.
         </p>
 
-        <a href="index.html#blog" class="back-btn">
+        <a href="index.html#blogs" class="back-btn">
             ← Back to Blogs
         </a>
 
     </article>
 </main>
-
-<section class="contact-box" aria-labelledby="contact-title">
-    <h2 id="contact-title">Let's Build Something Great 🚀</h2>
-
-    <p>Contact us for websites, apps &amp; software solutions.</p>
-
-    <div class="contact-actions">
-        <a href="tel:+917905505209" class="btn call">
-            📞 Call
-        </a>
-
-        <a
-            href="https://wa.me/917905505209?text=Hello%20PBR%20Technologies%2C%20I%20am%20interested%20in%20your%20services."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn whatsapp">
-            💬 WhatsApp
-        </a>
-    </div>
-</section>
-
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -623,6 +633,26 @@ footer p {
     </div>
   </div>
 </footer>
+
+<section class="contact-box" aria-labelledby="contact-title">
+    <h2 id="contact-title">Let's Build Something Great 🚀</h2>
+
+    <p>Contact us for websites, apps &amp; software solutions.</p>
+
+    <div class="contact-actions">
+        <a href="tel:+917905505209" class="btn call">
+            📞 Call
+        </a>
+
+        <a
+            href="https://wa.me/917905505209?text=Hello%20PBR%20Technologies%2C%20I%20am%20interested%20in%20your%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn whatsapp">
+            💬 WhatsApp
+        </a>
+    </div>
+</section>
 
 <a
     href="https://wa.me/917905505209?text=Hello%20PBR%20Technologies%2C%20I%20am%20interested%20in%20your%20services."

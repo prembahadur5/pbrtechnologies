@@ -386,10 +386,54 @@ button.submit {
 
 /* Footer */
 footer {
-    background: #0f172a;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background: #111827;
+  color: #cbd5e1;
+  padding: 50px 0 20px;
+  margin-top: 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-brand {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+footer h3 {
+  color: #fff;
+  font-size: 17px;
+  margin-bottom: 14px;
+}
+
+footer p,
+footer li {
+  font-size: 14px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li {
+  margin-bottom: 8px;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.12);
+  margin-top: 35px;
+  padding-top: 18px;
+  text-align: center;
+  font-size: 13px;
 }
 
 /* Animation */
@@ -513,8 +557,6 @@ footer {
 </head>
 
 <body>
-
-```html
 <!-- HEADER / NAVIGATION -->
 <header>
     <a href="index.html" class="logo-link" aria-label="PBR Technologies Home">
@@ -756,7 +798,6 @@ footer {
         </a>
     </div>
 </section>
-
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -798,7 +839,6 @@ footer {
     </div>
   </div>
 </footer>
-
 <!-- Floating WhatsApp -->
 <a
     href="https://wa.me/917905505209?text=Hello%20PBR%20Technologies%2C%20I%20am%20interested%20in%20your%20services."
